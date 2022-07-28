@@ -1,0 +1,99 @@
+@import 'assets/scss/colors';
+
+.spin  {
+    display: inline-block;
+    position: relative;
+    width: 55px;
+    height: 55px;
+
+    div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+        border: 5px solid $primary-color;
+        border-radius: 50%;
+        border-color: $primary-color transparent transparent transparent;
+        animation: spin-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+
+    & div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    & div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    & div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    &:global(.spin-size--small) {
+        width: 35px;
+        height: 35px;
+
+        div {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &:global(.spin-size--large) {
+        width: 75px;
+        height: 75px;
+
+        div {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &:global(.spin-type--secondary) {
+        div {
+            border: 3px solid $secondary-color;
+            border-color: $secondary-color transparent transparent transparent;
+        }
+    }
+
+    &:global(.spin-type--warning) {
+        div {
+            border: 3px solid $warning-color;
+            border-color: $warning-color transparent transparent transparent;
+        }
+    }
+
+    &:global(.spin-type--error) {
+        div {
+            border: 3px solid $error-color;
+            border-color: $error-color transparent transparent transparent;
+        }
+    }
+}
+
+.spinWrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.spinLayout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.301);
+}
+
+@keyframes spin-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,24 @@
+$primary-text-color: #255784;
+
+$primary-color: #2196f3;
+$secondary-color: #a8a9bb;
+$warning-color: #def321;
+$error-color: #f32144;
+
+$color-white: #fff;
+
+$primary-shadow-small: 0 0 5px $primary-color, 0 0 20px $primary-color, 0 0 40px $primary-color;
+$primary-shadow-middle: 0 0 10px $primary-color, 0 0 30px $primary-color, 0 0 50px $primary-color;
+$primary-shadow-large: 0 0 15px $primary-color, 0 0 40px $primary-color, 0 0 60px $primary-color;
+
+$secondary-shadow-small: 0 0 5px $secondary-color, 0 0 20px $secondary-color, 0 0 40px $secondary-color;
+$secondary-shadow-middle: 0 0 10px $secondary-color, 0 0 30px $secondary-color, 0 0 50px $secondary-color;
+$secondary-shadow-large: 0 0 15px $secondary-color, 0 0 40px $secondary-color, 0 0 60px $secondary-color;
+
+$warning-shadow-small: 0 0 5px $warning-color, 0 0 20px $warning-color, 0 0 40px $warning-color;
+$warning-shadow-middle: 0 0 10px $warning-color, 0 0 30px $warning-color, 0 0 50px $warning-color;
+$warning-shadow-large: 0 0 15px $warning-color, 0 0 40px $warning-color, 0 0 60px $warning-color;
+
+$error-shadow-small: 0 0 5px $error-color, 0 0 20px $error-color, 0 0 40px $error-color;
+$error-shadow-middle: 0 0 10px $error-color, 0 0 30px $error-color, 0 0 50px $error-color;
+$error-shadow-large: 0 0 15px $error-color, 0 0 40px $error-color, 0 0 60px $error-color;

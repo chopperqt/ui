@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button from 'components/button/Button'
+import Spin from 'components/spin/Spin'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div >
+      <div>
+        <div >
+          <Button sizing="small">Small button</Button>
+          <Button>Default button</Button>
+          <Button sizing="large">Large button</Button>
+        </div>
+        <div>
+          <Button
+            isLoading={true}
+            fullWidth={true}
+            disabled={true}
+            isCircle={true}
+          >
+            Full width button
+          </Button>
+        </div>
+        <div>
+          Spin component
+          <Spin isLoading={true}>
+            <div style={{ width: '200px', height: '200px' }}>
+              Какие то надписи и прочее прочее прочее
+            </div>
+          </Spin>
+        </div>
+      </div>
+    </div >
   );
 }
 
