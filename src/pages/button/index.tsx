@@ -1,6 +1,12 @@
+import Loading from "./partials/Loading"
+import Size from "./partials/Size"
+import Disabled from "./partials/DIsabled"
+
 const ButtonPage = () => (
   <div className="container">
-    Кнопка
+    <Size />
+    <Loading />
+    <Disabled />
   </div>
 )
 

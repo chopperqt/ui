@@ -31,9 +31,10 @@ const Button = ({
 				[styles.small]: isSmall,
 				[styles.large]: isLarge,
 				[styles.fullWidth]: fullWidth,
-				[styles.disabled]: props.disabled,
+				[styles.disabled]: props.disabled || isLoading,
 				[styles.circle]: isCircle,
 			}, props.className)}
+			disabled={props.disabled || isLoading}
 			{...props}
 		>
 			{!isLoading && children}
