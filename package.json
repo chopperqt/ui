@@ -1,6 +1,9 @@
 {
-  "name": "ui",
-  "version": "1.0.0",
+  "name": "@chopperqt/ui",
+  "publishConfig": {
+    "registry": "https://github.com/chopperqt/ui"
+  },
+  "version": "1.0.3",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
@@ -10,13 +13,18 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.48",
-    "react": "^18.2.0",
     "rollup": "^4.9.5",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
