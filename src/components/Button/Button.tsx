@@ -4,10 +4,12 @@ import "./Button.css";
 
 export interface ButtonProps {
   label: string;
+  isDisabled?: boolean;
 }
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
-};
+const Button = ({
+  label,
+  isDisabled = false,
+}: ButtonProps) => (<button disabled={isDisabled}>{label}</button>)
 
 export default Button;

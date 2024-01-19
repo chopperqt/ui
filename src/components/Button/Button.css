@@ -1,3 +1,26 @@
 button {
   font-size: 40px;
+  padding: 5px;
+  background-color: #00a8ef;
+  color: #fff;
+  font-size: 14px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00a8efe6;
+}
+
+button:active {
+  background-color: #018fdb;
+}
+
+button:disabled {
+  background-color: #00a8ef80;
+  cursor: not-allowed;
 }
