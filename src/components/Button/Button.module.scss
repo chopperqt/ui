@@ -1,0 +1,58 @@
+.button {
+  font-size: 40px;
+  padding: 5px;
+  background-color: #00a8ef;
+  color: #fff;
+  font-size: 14px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+
+  &:hover {
+    background-color: #00a8efe6;
+  }
+
+  &:active {
+    background-color: #018fdb;
+  }
+
+  &:disabled {
+    background-color: #00a8ef80;
+    cursor: not-allowed;
+  }
+
+  &Loading {
+    color: transparent;
+  }
+
+  &Disabled {
+    background-color: #00a8ef80;
+    cursor: not-allowed;
+  }
+}
+
+.loaderWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #00a8ef80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  z-index: 2;
+  box-sizing: border-box;
+  left: 0;
+  background-color: #00a8ef80;
+  cursor: not-allowed;
+
+  svg {
+    fill: #fff;
+  }
+}

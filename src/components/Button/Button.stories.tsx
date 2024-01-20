@@ -10,14 +10,24 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const HelloWorld = Template.bind({});
+export const Default = Template.bind({});
+export const Disabled = Template.bind({});
+export const Loading = Template.bind({});
 
-HelloWorld.args = {
-  label: "Hello world",
+Default.args = {
+  label: "Button",
+  isDisabled: false,
+  isLoading: false,
 };
 
-export const ClickMe = Template.bind({});
+Disabled.args = {
+  label: "Disabled",
+  isDisabled: false,
+  isLoading: false,
+}
 
-ClickMe.args = {
-  label: "Click me",
+Loading.args = {
+  label: "Loaded",
+  isLoading: true,
+  isDisabled: false,
 };
