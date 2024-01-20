@@ -2,7 +2,7 @@ import React from 'react'
 
 import Icon from '../Icon'
 
-import './Loader.scss'
+import styles from './Loader.module.scss'
 
 const DEFAULT_SIZE = 15
 
@@ -20,10 +20,10 @@ const Loader = ({
   }
 
   return (
-    <span className="layout">
+    <span className={styles.layout}>
       <Icon
-        icon='Loading'
-        className="loader"
+        icon="Loading"
+        className={styles.loader}
       />
     </span>
   )

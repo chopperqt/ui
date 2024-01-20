@@ -11,6 +11,13 @@
   cursor: pointer;
   transition: 0.3s;
   position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  svg {
+    fill: #fff;
+  }
 
   &:hover {
     background-color: #00a8efe6;
@@ -27,6 +34,10 @@
 
   &Loading {
     color: transparent;
+
+    svg {
+      fill: transparent;
+    }
   }
 
   &Disabled {

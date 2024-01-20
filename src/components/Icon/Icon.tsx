@@ -1,8 +1,10 @@
 import React from "react";
 
-import { Icons } from "./icons";
+import {
+  Icons,
+  IconNames,
+} from "./icons";
 
-type IconNames = keyof typeof Icons;
 
 export interface IconProps {
   icon: IconNames

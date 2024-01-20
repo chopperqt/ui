@@ -13,6 +13,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 export const Disabled = Template.bind({});
 export const Loading = Template.bind({});
+export const Icon = Template.bind({});
 
 Default.args = {
   label: "Button",
@@ -31,3 +32,10 @@ Loading.args = {
   isLoading: true,
   isDisabled: false,
 };
+
+Icon.args = {
+  label: "Button + Icon",
+  isLoading: false,
+  isDisabled: false,
+  icon: "Settings"
+}
