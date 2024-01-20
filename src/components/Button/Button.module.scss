@@ -1,8 +1,10 @@
+@import "../../color.scss";
+
 .button {
   font-size: 40px;
   padding: 5px;
-  background-color: #00a8ef;
-  color: #fff;
+  background-color: rgba(var(--PRIMARY1));
+  color: var(--WHITE);
   font-size: 14px;
   min-width: 30px;
   min-height: 30px;
@@ -16,19 +18,19 @@
   column-gap: 5px;
 
   svg {
-    fill: #fff;
+    fill: var(--WHITE);
   }
 
   &:hover {
-    background-color: #00a8efe6;
+    background-color: rgba(var(--PRIMARY1), var(--HOVER-ALPHA));
   }
 
   &:active {
-    background-color: #018fdb;
+    background-color: var(--PRIMARY2);
   }
 
   &:disabled {
-    background-color: #00a8ef80;
+    background-color: rgba(var(--PRIMARY1), var(--DISABLED-ALPHA));
     cursor: not-allowed;
   }
 
@@ -64,6 +66,6 @@
   cursor: not-allowed;
 
   svg {
-    fill: #fff;
+    fill: var(--WHITE);
   }
 }

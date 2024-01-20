@@ -19,6 +19,7 @@ Default.args = {
   label: "Button",
   isDisabled: false,
   isLoading: false,
+  icon: undefined
 };
 
 Disabled.args = {
