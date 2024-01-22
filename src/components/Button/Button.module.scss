@@ -1,4 +1,9 @@
 @import "../../color.scss";
+@import "../../fonts.scss";
+
+* {
+  font-family: "MontserratRegular";
+}
 
 .button {
   font-size: 40px;
@@ -34,17 +39,33 @@
     cursor: not-allowed;
   }
 
+  &Disabled {
+    background-color: #00a8ef80;
+    cursor: not-allowed;
+  }
+
+  &Danger {
+    background-color: rgba(var(--RED1));
+
+    &:disabled {
+      background-color: rgba(var(--RED1), var(--DISABLED-ALPHA));
+    }
+
+    &:hover {
+      background-color: rgba(var(--RED1), var(--HOVER-ALPHA));
+    }
+
+    &:active {
+      background-color: var(--RED2);
+    }
+  }
+
   &Loading {
     color: transparent;
 
     svg {
       fill: transparent;
     }
-  }
-
-  &Disabled {
-    background-color: #00a8ef80;
-    cursor: not-allowed;
   }
 }
 

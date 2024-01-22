@@ -12,6 +12,7 @@ export interface ButtonProps extends Pick<React.ButtonHTMLAttributes<HTMLButtonE
   icon?: IconNames
   isDisabled?: boolean;
   isLoading?: boolean;
+  isDanger?: boolean
 }
 
 const Button = ({
@@ -19,12 +20,14 @@ const Button = ({
   icon,
   isDisabled = false,
   isLoading = false,
+  isDanger = false,
   onClick = () => { },
 }: ButtonProps) => (
   <button
     className={cx(styles.button, {
       [styles.buttonLoading]: isLoading,
       [styles.buttonDisabled]: isLoading,
+      [styles.buttonDanger]: isDanger,
     })}
     onClick={onClick}
     disabled={isDisabled}

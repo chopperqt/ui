@@ -14,6 +14,7 @@ export const Default = Template.bind({});
 export const Disabled = Template.bind({});
 export const Loading = Template.bind({});
 export const Icon = Template.bind({});
+export const Danger = Template.bind({})
 
 Default.args = {
   label: "Button",
@@ -39,4 +40,12 @@ Icon.args = {
   isLoading: false,
   isDisabled: false,
   icon: "Settings"
+}
+
+Danger.args = {
+  label: "Button + Icon",
+  isLoading: false,
+  isDisabled: false,
+  icon: "Settings",
+  isDanger: true,
 }
