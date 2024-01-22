@@ -1,0 +1,29 @@
+@import "../../color.scss";
+
+.input {
+  border: 1px solid var(--GRAY1);
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: var(--GRAY1);
+  }
+
+  &:hover {
+    border-color: rgba(var(--PRIMARY1), var(--HOVER-ALPHA));
+  }
+
+  &:focus {
+    border-color: var(--PRIMARY2);
+  }
+
+  &:disabled {
+    background-color: var(--GRAY2);
+    color: var(--GRAY1);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+}
