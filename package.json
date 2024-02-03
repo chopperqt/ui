@@ -8,7 +8,8 @@
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "commit": "cz"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +29,7 @@
     "@storybook/test": "^7.6.10",
     "@types/react": "^18.2.48",
     "css-loader": "^6.9.1",
+    "cz-conventional-changelog": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.9.5",
@@ -36,6 +38,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
+    "semantic-release": "^23.0.0",
     "storybook": "^7.6.10",
     "style-loader": "^3.3.4",
     "tslib": "^2.6.2",
@@ -52,5 +55,10 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "classnames": "^2.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
