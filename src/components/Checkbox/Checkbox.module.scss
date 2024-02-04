@@ -7,7 +7,6 @@
   cursor: pointer;
   font-size: 14px;
   user-select: none;
-  transition: .2s;
 
   &:hover input~span {
     background-color: var(--GRAY-2);
@@ -69,6 +68,23 @@
       justify-content: center;
       align-items: center;
       border: 1px solid transparent;
+    }
+  }
+
+  &Disabled {
+    pointer-events: none;
+    color: var(--GRAY-3);
+
+    input {
+      &:checked~span {
+        background-color: var(--GRAY-1);
+        border: 1px solid var(--GRAY-1);
+      }
+    }
+
+    span {
+      border: 1px solid var(--GRAY-1);
+      background-color: var(--GRAY-1);
     }
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import cx from 'classnames'
 
 import Icon from "../Icon";
 
@@ -8,17 +9,21 @@ export interface CheckboxProps {
   name?: string
   label?: string
   isChecked?: boolean
+  isDisabled?: boolean
   onChange?: (isChecked: boolean) => void
 }
 
 const Checkbox = ({
   name = '',
-  isChecked = false,
   label = '',
+  isChecked = false,
+  isDisabled = false,
   onChange = () => { },
 }: CheckboxProps) => (
   <label
-    className={s.layout}
+    className={cx(s.layout, {
+      [s.layoutDisabled]: isDisabled,
+    })}
     htmlFor={name}
   >
     {label}
@@ -26,6 +31,7 @@ const Checkbox = ({
       name={name}
       type="checkbox"
       checked={isChecked}
+      disabled={isDisabled}
       onChange={() => onChange(!isChecked)}
     />
     {isChecked && (
@@ -36,7 +42,7 @@ const Checkbox = ({
         />
       </div>
     )}
-    <span className={s.layoutCheckmark}></span>
+    <span className={s.layoutCheckmark} />
   </label>
 )
 
