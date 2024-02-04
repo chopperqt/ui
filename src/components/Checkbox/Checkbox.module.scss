@@ -1,0 +1,90 @@
+@import "../../color.scss";
+
+.layout {
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+
+  &:hover input~span {
+    background-color: var(--GRAY-2);
+  }
+
+  &:active input~span {
+    background-color: var(--GRAY-3);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked~span {
+      font-size: 123px;
+      background-color: var(--BLUE-3);
+    }
+  }
+
+  &Checkmark {
+    border: 1px solid var(--BLUE-3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &Icon {
+    fill: var(--WHITE);
+    left: 0;
+
+    &Wrapper {
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid transparent;
+    }
+  }
+
+  &Disabled {
+    pointer-events: none;
+    color: var(--GRAY-3);
+
+    input {
+      &:checked~span {
+        background-color: var(--GRAY-1);
+        border: 1px solid var(--GRAY-1);
+      }
+    }
+
+    span {
+      border: 1px solid var(--GRAY-1);
+      background-color: var(--GRAY-1);
+    }
+  }
+}

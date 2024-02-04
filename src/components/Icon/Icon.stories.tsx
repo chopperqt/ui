@@ -13,6 +13,7 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon{...args} />;
 export const Settings = Template.bind({});
 export const Close = Template.bind({});
 export const Loading = Template.bind({});
+export const SmallTick = Template.bind({})
 
 Settings.args = {
   icon: "Settings",
@@ -25,3 +26,8 @@ Close.args = {
 Loading.args = {
   icon: "Loading",
 }
+
+SmallTick.args = {
+  icon: 'SmallTick',
+}
+

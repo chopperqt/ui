@@ -1,26 +1,26 @@
 @import "../../color.scss";
 
 .input {
-  border: 1px solid var(--GRAY1);
+  border: 1px solid var(--GRAY-3);
   border-radius: 3px;
   padding: 8px;
   outline: none;
   transition: border-color 0.2s;
 
   &::placeholder {
-    color: var(--GRAY1);
+    color: var(--GRAY-3);
   }
 
   &:hover {
-    border-color: rgba(var(--PRIMARY1), var(--HOVER-ALPHA));
+    border-color: var(--BLUE-2)
   }
 
   &:focus {
-    border-color: var(--PRIMARY2);
+    border-color: var(--BLUE-3);
   }
 
   &:disabled {
-    background-color: var(--GRAY2);
+    background-color: var(--GRAY-1);
     color: var(--GRAY1);
     pointer-events: none;
     cursor: not-allowed;
