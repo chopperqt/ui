@@ -8,7 +8,7 @@
 .button {
   font-size: 40px;
   padding: 5px;
-  background-color: rgba(var(--PRIMARY1));
+  background-color: var(--BLUE-2);
   color: var(--WHITE);
   font-size: 14px;
   min-width: 30px;
@@ -27,36 +27,41 @@
   }
 
   &:hover {
-    background-color: rgba(var(--PRIMARY1), var(--HOVER-ALPHA));
+    background-color: var(--BLUE-3);
   }
 
   &:active {
-    background-color: var(--PRIMARY2);
+    background-color: var(--BLUE-4);
   }
 
   &:disabled {
-    background-color: rgba(var(--PRIMARY1), var(--DISABLED-ALPHA));
+    background-color: var(--BLUE-1);
     cursor: not-allowed;
   }
 
   &Disabled {
-    background-color: #00a8ef80;
+    background-color: var(--BLUE-1);
     cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      background-color: var(--BLUE-1);
+    }
   }
 
   &Danger {
-    background-color: rgba(var(--RED1));
+    background-color: var(--RED-3);
 
     &:disabled {
-      background-color: rgba(var(--RED1), var(--DISABLED-ALPHA));
+      background-color: var(--RED-1);
     }
 
     &:hover {
-      background-color: rgba(var(--RED1), var(--HOVER-ALPHA));
+      background-color: var(--RED-2);
     }
 
     &:active {
-      background-color: var(--RED2);
+      background-color: var(--RED-4);
     }
   }
 
@@ -73,7 +78,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background-color: #00a8ef80;
+  background-color: var(BLUE-1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +88,6 @@
   z-index: 2;
   box-sizing: border-box;
   left: 0;
-  background-color: #00a8ef80;
   cursor: not-allowed;
 
   svg {
