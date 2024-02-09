@@ -94,3 +94,25 @@
     fill: var(--WHITE);
   }
 }
+
+.text {
+  padding: 0;
+  color: var(--BLACK);
+  background-color: transparent;
+
+  svg {
+    fill: var(--BLACK);
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &Danger {
+    color: var(--RED-5);
+
+    svg {
+      fill: var(--RED-5);
+    }
+  }
+}
