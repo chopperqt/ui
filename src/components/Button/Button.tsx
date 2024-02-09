@@ -8,7 +8,7 @@ import { LoaderWrapper } from "./partials/loader-wrapper";
 import styles from './Button.module.scss'
 
 export interface ButtonProps extends Pick<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
-  label: string;
+  label?: string;
   icon?: IconNames
   isDisabled?: boolean;
   isLoading?: boolean;
@@ -16,8 +16,8 @@ export interface ButtonProps extends Pick<React.ButtonHTMLAttributes<HTMLButtonE
 }
 
 const Button = ({
-  label,
   icon,
+  label = '',
   isDisabled = false,
   isLoading = false,
   isDanger = false,
