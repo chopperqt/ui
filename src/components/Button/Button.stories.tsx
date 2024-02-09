@@ -2,6 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Button from "./Button";
+import { ButtonType } from './Button'
 
 export default {
   title: "React-UI/Button",
@@ -11,10 +12,8 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
-export const Disabled = Template.bind({});
-export const Loading = Template.bind({});
-export const Icon = Template.bind({});
-export const Danger = Template.bind({})
+export const Danger = Template.bind({});
+export const Text = Template.bind({});
 
 Default.args = {
   label: "Button",
@@ -23,29 +22,19 @@ Default.args = {
   icon: undefined
 };
 
-Disabled.args = {
-  label: "Disabled",
-  isDisabled: false,
-  isLoading: false,
-}
-
-Loading.args = {
-  label: "Loaded",
-  isLoading: true,
-  isDisabled: false,
-};
-
-Icon.args = {
-  label: "Button + Icon",
-  isLoading: false,
-  isDisabled: false,
-  icon: "Settings"
-}
-
 Danger.args = {
   label: "Button + Icon",
   isLoading: false,
   isDisabled: false,
   icon: "Settings",
   isDanger: true,
+}
+
+Text.args = {
+  label: "Text button",
+  isLoading: false,
+  isDisabled: false,
+  icon: 'Settings',
+  isDanger: false,
+  type: ButtonType.TEXT,
 }
