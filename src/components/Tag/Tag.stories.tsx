@@ -17,4 +17,5 @@ export const Tag = Template.bind({});
 Tag.args = {
   text: "Tag example",
   isInteractive: false,
+  onRemove: undefined
 };

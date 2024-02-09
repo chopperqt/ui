@@ -30,3 +30,12 @@
     fill: var(--GRAY-5);
   }
 }
+
+.button {
+  min-height: auto;
+  min-width: auto;
+
+  svg {
+    width: 12px;
+  }
+}
