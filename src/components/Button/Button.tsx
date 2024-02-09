@@ -13,17 +13,19 @@ export enum ButtonType {
 }
 
 export interface ButtonProps extends Pick<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
-  label: string;
+  label?: string;
   icon?: IconNames
   isDisabled?: boolean;
   isLoading?: boolean;
   isDanger?: boolean
-  type?: ButtonType
+  type?: ButtonType;
+  className?: string;
 }
 
 const Button = ({
-  label,
   icon,
+  className,
+  label = '',
   type = ButtonType.NONE,
   isDisabled = false,
   isLoading = false,
@@ -40,7 +42,8 @@ const Button = ({
         [styles.buttonDanger]: isDanger,
         [styles.text]: isText,
         [styles.textDanger]: isText && isDanger,
-      })}
+
+      }, className)}
       onClick={onClick}
       disabled={isDisabled}
     >

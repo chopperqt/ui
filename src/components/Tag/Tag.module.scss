@@ -1,0 +1,41 @@
+@import "../../color.scss";
+@import "../../fonts.scss";
+
+.layout {
+  border-radius: 3px;
+  background-color: var(--GRAY-1);
+  padding: 0 5px;
+  width: fit-content;
+  font-size: 12px;
+  color: var(--GRAY-5);
+  transition: .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: flex;
+  column-gap: 5px;
+  font-family: "MontserratRegular";
+
+  &Text {
+    white-space: nowrap;
+  }
+
+  &Interacitve {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--GRAY-2);
+    }
+  }
+
+  &Icon {
+    width: 12px;
+    fill: var(--GRAY-5);
+  }
+}
+
+.button {
+  min-height: auto;
+  min-width: auto;
+
+  svg {
+    width: 12px;
+  }
+}
