@@ -1,0 +1,81 @@
+@import "../../variables";
+@import "../../color.scss";
+
+.layout {
+  display: block;
+  position: relative;
+  padding-left: 23px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked~span {
+      border-width: 5px;
+      background-color: var(--WHITE);
+
+      &:after {
+        display: block;
+      }
+
+    }
+  }
+
+  &:hover {
+    input~span {
+      background-color: var(--GRAY-2);
+    }
+
+    input:checked~span {
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    input~span {
+      background-color: var(--GRAY-3);
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid var(--BLUE-3);
+  border-radius: 50%;
+  transition: var(--DEFAULT_TRANSITION) var(--DEFAULT_ANIMATE);
+  box-sizing: border-box;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: flex;
+  }
+
+  &Disabled {
+    border-color: var(--GRAY-1);
+  }
+}
+
+.disabled {
+  transition: var(--DEFAULT_TRANSITION) var(--DEFAULT_ANIMATE);
+  color: var(--GRAY-3);
+  pointer-events: none;
+
+  input {
+    &:checked~span {
+      border-width: 5px;
+      background-color: transparent;
+    }
+  }
+
+  label {
+    border-color: var(--GRAY-1);
+  }
+}

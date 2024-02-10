@@ -1,5 +1,6 @@
 @import "../../color.scss";
 @import "../../fonts.scss";
+@import "../../variables.scss";
 
 .layout {
   border-radius: 3px;
@@ -8,7 +9,7 @@
   width: fit-content;
   font-size: 12px;
   color: var(--GRAY-5);
-  transition: .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: var(--DEFAULT_TRANSITION) var(--DEFAULT_ANIMATE);
   display: flex;
   column-gap: 5px;
   font-family: "MontserratRegular";
