@@ -8,11 +8,16 @@ export interface RadioProps {
   isChecked?: boolean
   isDisabled?: boolean
   name?: string
+  value?: string | number
+  className?: string
+  onClick?: () => void
 }
 
 const Radio = ({
   label = '',
   name = '',
+  value = '',
+  className = '',
   isChecked = false,
   isDisabled = false,
 }: RadioProps) => (
@@ -20,12 +25,13 @@ const Radio = ({
     htmlFor={name}
     className={cx(style.layout, {
       [style.disabled]: isDisabled,
-    })}
+    }, className)}
   >{label}
     <input
       type="radio"
       checked={isChecked}
       name={name}
+      value={value}
       disabled={isDisabled}
     />
     <span

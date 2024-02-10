@@ -27,6 +27,6 @@ const Loader = ({
       />
     </span>
   )
-
 }
+
 export default Loader 
